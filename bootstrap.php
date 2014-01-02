@@ -6,10 +6,6 @@ ini_set('html_errors', 'off');
 ini_set('log_errors','on');
 error_reporting(-1);
 
-header("Content-type: text/plain");
-
-require 'vendor/autoload.php';
-
 $config_file = '/home/martin/.rackspace_cloud_credentials';
 $config = parse_ini_file($config_file, true);
 
@@ -17,7 +13,7 @@ define("API_USERNAME", $config['rackspace_cloud']['username']);
 define("API_KEY", $config['rackspace_cloud']['api_key']);
 
 
-function prettyPrint( $json )
+function json_pretty_print ( $json )
 {
     $result = '';
     $level = 0;
