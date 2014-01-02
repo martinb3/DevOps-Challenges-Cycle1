@@ -8,12 +8,14 @@ set_time_limit(0);
 (@include_once __DIR__ . '/vendor/autoload.php') || @include_once __DIR__ . '/../../autoload.php';
 
 require_once('challenge1.php');
+require_once('challenge2.php');
 
 use Symfony\Component\Console\Application;
 
 $app = new Application('Support DevOps Challenges Cycle 1', '0.1');
 $app->addCommands(array(
         new Challenge1Command(),
+        new Challenge2Command(),
     ));
 $app->run();
 

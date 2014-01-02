@@ -1,3 +1,4 @@
 secrets.php
 vendor
 composer.*
+id_rsa*
