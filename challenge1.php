@@ -119,6 +119,7 @@ EOT
 
 	    $progress->start($output, 100);
 	    $server->waitFor(ServerState::ACTIVE, 600, $callback);
+            $progress->setCurrent(100);
 	    $progress->finish();
 
 	    $addresses = (array)$server->addresses;
