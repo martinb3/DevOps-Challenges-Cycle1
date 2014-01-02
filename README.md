@@ -68,6 +68,22 @@ root@foo1:~#
 
 ```
 
-__Challenge 3__: Write a script that prints a list of all of the DNS domains on an account. Let the user select a domain from the list and add an "A" record to that domain by entering an IP Address TTL, and requested "A" record text. This must be done in PHP with php-opencloud. 
+~~__Challenge 3__~~: Write a script that prints a list of all of the DNS domains on an account. Let the user select a domain from the list and add an "A" record to that domain by entering an IP Address TTL, and requested "A" record text. This must be done in PHP with php-opencloud. 
+
+Example:
+```
+$ ./console challenge3  
+Connecting to DNS service.
+The following domains were found:
+ rax.mbs3.org
+
+What domain do you want to operate on? (autocomplete)  rax.mbs3.org
+
+You selected rax.mbs3.org
+Please enter a valid IP address: 8.8.8.8
+Please enter a valid TTL: 6000
+Please enter a valid text value: pleasedontexist.rax.mbs3.org
+pleasedontexist.rax.mbs3.org 6000 8.8.8.8 created successfully
+```
 
 __Challenge 4__: Write a script that creates a Cloud Files Container. If the container already exists, exit and let the user know. The script should also upload a directory from the local filesystem to the new container, and enable CDN for the new container. The script must return the CDN URL. This must be done in PHP with php-opencloud. 

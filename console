@@ -9,6 +9,7 @@ set_time_limit(0);
 
 require_once('challenge1.php');
 require_once('challenge2.php');
+require_once('challenge3.php');
 
 use Symfony\Component\Console\Application;
 
@@ -16,6 +17,7 @@ $app = new Application('Support DevOps Challenges Cycle 1', '0.1');
 $app->addCommands(array(
         new Challenge1Command(),
         new Challenge2Command(),
+        new Challenge3Command(),
     ));
 $app->run();
 
