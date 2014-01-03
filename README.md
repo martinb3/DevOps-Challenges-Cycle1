@@ -86,4 +86,28 @@ Please enter a valid text value: pleasedontexist.rax.mbs3.org
 pleasedontexist.rax.mbs3.org 6000 8.8.8.8 created successfully
 ```
 
-__Challenge 4__: Write a script that creates a Cloud Files Container. If the container already exists, exit and let the user know. The script should also upload a directory from the local filesystem to the new container, and enable CDN for the new container. The script must return the CDN URL. This must be done in PHP with php-opencloud. 
+~~__Challenge 4__~~: Write a script that creates a Cloud Files Container. If the container already exists, exit and let the user know. The script should also upload a directory from the local filesystem to the new container, and enable CDN for the new container. The script must return the CDN URL. This must be done in PHP with php-opencloud. 
+
+Example:
+```
+$ ls -la test_upload_dir/
+total 8
+drwxrwxr-x 2 martin martin 4096 Jan  2 23:57 .
+drwxrwxr-x 5 martin martin 4096 Jan  3 00:02 ..
+-rw-rw-r-- 1 martin martin    0 Jan  2 23:57 a
+-rw-rw-r-- 1 martin martin    0 Jan  2 23:57 b
+-rw-rw-r-- 1 martin martin    0 Jan  2 23:57 c
+
+$ ./console challenge4 newcontainer1 test_upload_dir
+Connecting to object store service.
+newcontainer1 created successfully from test_upload_dir
+newcontainer1 CDN URL is http://7efe4eefaeb78589d20c-18f6560a03119c7191f3f22faac93d67.r27.cf5.rackcdn.com
+
+$ ./console challenge4 newcontainer1 test_upload_dir
+Connecting to object store service.
+Container newcontainer1 already found, won't overwrite, exiting
+martin@web1:~/src/DevOps-Challenges-Cycle1$ 
+
+$ ./console challenge4 newcontainer1 test_upload_dir_doesnot_exist
+Directory test_upload_dir_doesnot_exist either does not exist, or isn't a directory, exiting
+```
