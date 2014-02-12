@@ -7,3 +7,5 @@ Support DevOps Challenges Cycle 1
 
 Challenges 1-4 should be run in the 'part1' subdirectory using 'console' [(read more)](part1/)
 
+Challenges 5-8 should be run in the 'part2' subdirectory using '?' [(read more)](part2/)
+
