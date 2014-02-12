@@ -5,11 +5,13 @@ Your name: Martin Smith / martin@mbs3.org / martin.smith@rackspace.com
 
 Support DevOps Challenges Cycle 1
 
+Challenges 1-4 should be run in the 'part1' subdirectory.
+
 ~~__Challenge 1__~~: Write a script that builds a 512MB Cloud Server and returns the root password and IP address for the server. This must be done in PHP with php-opencloud 
 
 Example:
 ```
-martin@web1:~/src/DevOps-Challenges-Cycle1$ ./console challenge1 abc12345
+$ ./console challenge1 abc12345
 Creating a server abc12345 per your request.
 Creation of server abc12345 was a success.
 Root password is: E56v3P7mooAz
@@ -106,7 +108,7 @@ newcontainer1 CDN URL is http://7efe4eefaeb78589d20c-18f6560a03119c7191f3f22faac
 $ ./console challenge4 newcontainer1 test_upload_dir
 Connecting to object store service.
 Container newcontainer1 already found, won't overwrite, exiting
-martin@web1:~/src/DevOps-Challenges-Cycle1$ 
+martin@web1:~/src/DevOps-Challenges-Cycle1/part1$ 
 
 $ ./console challenge4 newcontainer1 test_upload_dir_doesnot_exist
 Directory test_upload_dir_doesnot_exist either does not exist, or isn't a directory, exiting
