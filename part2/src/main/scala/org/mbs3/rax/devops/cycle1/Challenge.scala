@@ -38,7 +38,17 @@ abstract trait Challenge {
 	  p.propOrElse("RAXRC", home+"/"+".rackspace_cloud_credentials")
 	}
 	
-	private def getConfigLines() = scala.io.Source.fromFile(getRAXRC()).getLines
+	private def getConfigLines() = {
+	  var p = getRAXRC()
+	  val f = new java.io.File(p)
+	  val exists = f.exists && f.isFile() && f.canRead()
+	  
+	  if(!exists) {
+	    throw new IllegalArgumentException("Cannot find credential file " + p)
+	  }
+	  
+	  scala.io.Source.fromFile(p).getLines
+	}
 	
 	
 	val reader = new ConsoleReader()

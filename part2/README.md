@@ -5,6 +5,18 @@ Your name: Martin Smith / martin@mbs3.org / martin.smith@rackspace.com
 
 Support DevOps Challenges Cycle 1 - part 2
 
+All of these examples below can be run / built using sbt, eclipse, or the commandline. For sbt, see:
+```
+mart6985@mart6985-laptop:~/src/DevOps-Challenges-Cycle1/part2$ sbt
+[info] Loading project definition from /home/mart6985/src/DevOps-Challenges-Cycle1/part2/project
+[info] Set current project to DevOps-Challenges-Cycle1 (in build file:/home/mart6985/src/DevOps-Challenges-Cycle1/part2/)
+> compile
+[success] Total time: 0 s, completed Feb 13, 2014 2:41:14 PM
+> run challenge5
+[info] Running org.mbs3.rax.devops.cycle1.Console challenge5
+Please suggest a cloud database instance name:
+```
+
 ~~__Challenge 5__~~: Write a script that creates a Cloud Database. If a CDB already exists with that name, suggest a new name like "name1" and give the user the choice to proceed or exit. The script should also create X number of Databases and X number of users in the new Cloud Database Instance. The script must return the Cloud DB URL. Choose your language and SDK!
 
 ```
