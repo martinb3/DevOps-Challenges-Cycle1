@@ -11,7 +11,7 @@ object Console extends App{
 	
 	firstOption match {
 	  case "challenge5" => Challenge5.doChallenge(arglist.tail)
-	  case "challenge6" => Unit
+	  case "challenge6" => Challenge6.doChallenge(arglist.tail)
 	  case "challenge7" => Unit
 	  case "challenge8" => Unit
 	  case _ => println("Option '"+firstOption+"' not found")
