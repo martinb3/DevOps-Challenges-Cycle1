@@ -1,6 +1,7 @@
 package org.mbs3.rax.devops.cycle1
 
 import jline.console.ConsoleReader
+import jline.console.completer.Completer
 
 abstract trait Challenge {
 	def doChallenge(args: List[String]): Unit
@@ -52,7 +53,13 @@ abstract trait Challenge {
 	
 	
 	val reader = new ConsoleReader()
-	protected def prompt(prompt: String) = reader.readLine(prompt)
 	protected def prompt() = reader.readLine()
+	protected def prompt(prompt: String) = reader.readLine(prompt)
+	protected def prompt(prompt: String, completer: Completer) = {
+	  reader.addCompleter(completer)
+	  val response = reader.readLine(prompt)
+	  reader.removeCompleter(completer)
+	  response
+	}
 
 }
