@@ -51,8 +51,6 @@ Creating user database3user1 with password 3ef2c556-a699-4d09-b9f0-33b33e424fe7 
 Creating user database3user2 with password a1f10a02-34cf-4c79-9f03-953a9d427375 successfully
 ```
 
-~~__Challenge 6__~~: Write a script that enables and executes a backup for a Cloud Database. Pre-requisite is that the Cloud DB Instance must already exist with a valid database (with some data) and a username with access to the DB. The user executing the script should be able to choose the Instance, Database, and User via the command line arguments to execute the backup. Choose your language and SDK!
-
 ~~__Challenge 7__~~: Write a script that creates 2 Cloud Servers and a Cloud Load Balancer. Add the 2 servers Private IP Addresses to the Load Balancer for port 80. For a bonus point, add an Error page served via the Load Balancer for when none of your nodes are available. Choose your language and SDK!
 
 ```
@@ -83,6 +81,4 @@ Set error page to BORKED
 [success] Total time: 173 s, completed Feb 14, 2014 3:20:34 PM
 > 
 ```
-
-~~__Challenge 8__~~: Write a script that creates a Cloud Performance 1GB Server. The script should then add a DNS "A" record for that server. Create a Cloud Monitoring Check and Alarm for a ping of the public IP address on your new server. Return to the STDOUT the IP Address, FQDN, and Monitoring Entity ID of your new server. Choose your language and SDK!
 
