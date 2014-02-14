@@ -18,7 +18,7 @@ import org.jclouds.openstack.trove.v1.domain.Instance
 object Challenge6 extends Challenge {
   def doChallenge(args: List[String]): Unit = {
 
-    val troveApi = ContextBuilder.newBuilder(PROVIDER)
+    val troveApi = ContextBuilder.newBuilder(DBPROVIDER)
       .credentials(getUsername, getAPIKey)
       .buildApi(TypeToken.of(classOf[TroveApi]))
 

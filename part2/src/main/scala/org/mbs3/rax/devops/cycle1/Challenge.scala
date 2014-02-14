@@ -6,7 +6,9 @@ import jline.console.completer.Completer
 abstract trait Challenge {
 	def doChallenge(args: List[String]): Unit
 
-   final val PROVIDER = scala.util.Properties.propOrElse("provider.cdb", "rackspace-clouddatabases-us");
+   final val DBPROVIDER = scala.util.Properties.propOrElse("provider.cdb", "rackspace-clouddatabases-us");
+   final val COMPUTEPROVIDER = scala.util.Properties.propOrElse("provider.cs", "rackspace-cloudservers-us");
+   final val LBPROVIDER = scala.util.Properties.propOrElse("provider.cld", "rackspace-cloudloadbalancers-us");
    final val ZONE = scala.util.Properties.propOrElse("zone", "IAD");
 	
 	protected def getUsername() = getConfigKeyOrException("username")

@@ -22,7 +22,7 @@ object Challenge5 extends Challenge {
   override def doChallenge(args: List[String]): Unit = {
     //println(args.mkString(","))
     
-    val troveApi = ContextBuilder.newBuilder(PROVIDER)
+    val troveApi = ContextBuilder.newBuilder(DBPROVIDER)
             .credentials(getUsername, getAPIKey)
             .buildApi(TypeToken.of(classOf[TroveApi]))
 

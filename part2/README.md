@@ -55,5 +55,34 @@ Creating user database3user2 with password a1f10a02-34cf-4c79-9f03-953a9d427375 
 
 ~~__Challenge 7__~~: Write a script that creates 2 Cloud Servers and a Cloud Load Balancer. Add the 2 servers Private IP Addresses to the Load Balancer for port 80. For a bonus point, add an Error page served via the Load Balancer for when none of your nodes are available. Choose your language and SDK!
 
+```
+> run challenge7
+[info] Running org.mbs3.rax.devops.cycle1.Console challenge7
+Creating 2 cloud servers from template with names like devops-challenge7-a09375c7
+Nodes created! Configuring webservers...
+Waiting for SSH to become available on devops-challenge7-a09375c7-cf3
+ Login: ssh root@162.242.244.117
+
+ Password: BY8TaTvgRNe7
+
+ Go to http://162.242.244.117
+
+Waiting for SSH to become available on devops-challenge7-a09375c7-d33
+ Login: ssh root@162.242.244.22
+
+ Password: uJm7A3oEuB67
+
+ Go to http://162.242.244.22
+
+Creating load balancer with existing nodes devops-challenge7-a09375c7-d33, devops-challenge7-a09375c7-cf3
+ LoadBalancer{id=21233, region=IAD, status=BUILD, name=lb-devops-challenge7-a09375c7, protocol=HTTP, port=80, nodeCount=2, nodes=[Node{id=35393, address=162.242.244.117, port=80, condition=ENABLED, type=PRIMARY, weight=20, status=ONLINE, metadata={}}, Node{id=35395, address=162.242.244.22, port=80, condition=ENABLED, type=PRIMARY, weight=20, status=ONLINE, metadata={}}], timeout=30, algorithm=WEIGHTED_LEAST_CONNECTIONS, halfClosed=false, clusterName=ztm-n01.iad3.lbaas.rackspace.net, created=Fri Feb 14 15:19:36 CST 2014, updated=Fri Feb 14 15:19:36 CST 2014, contentCaching=false, connectionLogging=false, accessRules=[], metadata={}, uri=https://iad.loadbalancers.api.rackspacecloud.com/v1.0/869424/loadbalancers/21233, sourceAddresses=SourceAddresses{ipv6Public=2001:4802:7901::4/64, ipv4Public=162.209.114.4, ipv4Servicenet=10.189.254.4}, virtualIPs=[VirtualIPWithId{id=2691, address=162.242.199.112, ipVersion=IPV4, type=PUBLIC}, VirtualIPWithId{id=9016093, address=2001:4802:7901:0000:4e69:3be2:0000:0002, ipVersion=IPV6, type=PUBLIC}]}
+
+ Go to http://162.242.199.112
+
+Set error page to BORKED
+[success] Total time: 173 s, completed Feb 14, 2014 3:20:34 PM
+> 
+```
+
 ~~__Challenge 8__~~: Write a script that creates a Cloud Performance 1GB Server. The script should then add a DNS "A" record for that server. Create a Cloud Monitoring Check and Alarm for a ping of the public IP address on your new server. Return to the STDOUT the IP Address, FQDN, and Monitoring Entity ID of your new server. Choose your language and SDK!
 
