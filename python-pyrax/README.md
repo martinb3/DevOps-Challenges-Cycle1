@@ -5,9 +5,9 @@ Your name: Martin Smith / martin@mbs3.org / martin.smith@rackspace.com
 
 Support DevOps Challenges Cycle 1 - part 2
 
-All of these examples below can be run / built using ruby and fog?
+All of these examples below can be run / built using python and pyrax
 ```
-mart6985@mart6985-laptop:~/src/DevOps-Challenges-Cycle1/part2$ fog?
+mart6985@mart6985-laptop:~/src/DevOps-Challenges-Cycle1/python-pyrax/console
 
 ```
 
