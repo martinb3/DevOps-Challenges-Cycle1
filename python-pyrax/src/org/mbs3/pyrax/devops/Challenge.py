@@ -24,5 +24,5 @@ class Challenge:
     def getPyrax(self):
         cls = pyrax.utils.import_class('pyrax.identity.rax_identity.RaxIdentity')
         pyrax.identity = cls()
-        pyrax.set_credentials(self.getUsername(), self.getApiKey(), region='IAD')
+        pyrax.set_credentials(self.getUsername(), self.getApiKey(), region='DFW')
         return pyrax

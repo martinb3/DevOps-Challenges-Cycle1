@@ -1,8 +1,11 @@
-from org.mbs3.pyrax.devops.Challenge import Challenge
+# Write a script that enables and executes a backup for a Cloud Database. Pre-
+# requisite is that the Cloud DB Instance must already exist with a valid 
+# database (with some data) and a username with access to the DB. The user 
+# executing the script should be able to choose the Instance, Database, and 
+# User via the command line arguments to execute the backup.
 
-from pprint import pprint
+from org.mbs3.pyrax.devops.Challenge import Challenge
 from time import time
-from pyrax import utils
 
 class Challenge6(object):
     def __init__(self):

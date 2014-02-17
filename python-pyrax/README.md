@@ -21,3 +21,13 @@ Creating backup martin-inst-backup-1392656366(<CloudDatabaseBackup description=N
 
 ~~__Challenge 8__~~: Write a script that creates a Cloud Performance 1GB Server. The script should then add a DNS "A" record for that server. Create a Cloud Monitoring Check and Alarm for a ping of the public IP address on your new server. Return to the STDOUT the IP Address, FQDN, and Monitoring Entity ID of your new server. Choose your language and SDK!
 
+```
+/home/mart6985/src/DevOps-Challenges-Cycle1/python-pyrax/src/Console.py challenge8 martin-devops
+Creating server martin-devops-1392662066, waiting for it to go ACTIVE
+Server is active, now creating DNS entry martin-devops-1392662066.rax.mbs3.org pointing to 166.78.4.60
+Added domain record {'data': u'166.78.4.60', 'type': 'A', 'name': u'martin-devops-1392662066.rax.mbs3.org', 'ttl': 6000}, now building monitor
+Finished, created server:
+IP Address: 166.78.4.60
+FQDN: martin-devops-1392662066.rax.mbs3.org
+Monitoring entity ID: enPUphzjlh
+```
